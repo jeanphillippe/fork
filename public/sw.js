@@ -1,9 +1,9 @@
 /* Fork · service worker
    Guarda las pantallas para que abran aunque se corte internet.
    Siempre intenta traer la versión nueva primero; si no hay red, usa la guardada. */
-const CACHE = 'fork-v3';
+const CACHE = 'fork-v4';
 const ARCHIVOS = ['./', 'index.html', 'hub.js', 'qr.js', 'icon.svg', 'manifest.json',
-  'tiendas/humo-burgers.js', 'tiendas/empanadas-arabes.js', 'tiendas/blue-sushi.js'];
+  'tiendas/tacky.js', 'tiendas/etnico.js', 'tiendas/blue-clean.js'];
 
 self.addEventListener('install', (e) => {
   e.waitUntil(caches.open(CACHE).then((c) => c.addAll(ARCHIVOS)).then(() => self.skipWaiting()));

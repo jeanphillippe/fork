@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Fork</title>
-<meta name="description" content="Fork: pedidos, cocina y retiro para locales gastronómicos, en cualquier pantalla.">
+<title>Fork · Pedidos, cocina y entrega para tu local</title>
+<meta name="description" content="Fork: pedidos, cocina y entrega para locales gastronómicos, en las pantallas que ya tenés. Gratis, sin mail ni contraseña.">
 <meta name="theme-color" content="#0f0d0b">
 <link rel="icon" href="icon.svg" type="image/svg+xml">
 <link rel="manifest" href="manifest.json">
@@ -283,6 +283,78 @@ body.cocina{--bg:#0c0b0a}
   .tq .ti{margin:1.5mm 0}.tq .op{padding-left:4mm;font-weight:500}.tq .nt{font-weight:900}.tq .c{text-align:center}.tq .b{font-weight:900}.tq .tot{font-size:14pt}.tq .xs{font-size:8pt;font-weight:500}
 }
 @media print{html:not(.imp-on) body *{visibility:hidden}html:not(.imp-on) .imprimir,html:not(.imp-on) .imprimir *{visibility:visible}.imprimir{position:absolute;inset:0;padding:10mm}.mod{background:none;position:static}.mod>.bx{box-shadow:none;max-height:none;overflow:visible}.no-print{display:none!important}.qrs .q{break-inside:avoid}}
+
+/* Landing de Fork */
+.lp-w{max-width:1080px;margin:0 auto;padding-left:20px;padding-right:20px}
+.lp-nav{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 86%,transparent);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:1px solid var(--bd)}
+.lp-nav .row{height:60px}
+.lp-logo{display:flex;align-items:center;gap:9px;font-weight:900;font-size:1.3em;letter-spacing:-.03em}
+.lp-logo img{border-radius:8px}
+.lp-links{display:flex;gap:2px;margin-left:14px}
+.lp-links button{padding:8px 11px;border-radius:9px;color:var(--mu);font-weight:600;font-size:.93em}
+.lp-links button:hover{color:var(--tx);background:var(--pn2)}
+.lp-mis{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:16px;padding:12px 14px;border-radius:12px;background:var(--pn);border:1px solid var(--bd)}
+.lp-mis b{font-size:.9em;margin-right:6px}
+.lp-hero{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center;padding-top:64px;padding-bottom:40px}
+.lp-hero h1{font-size:clamp(2.1em,5.2vw,3.4em);line-height:1.04;font-weight:900;letter-spacing:-.04em;text-wrap:balance}
+.lp-hero h1 span{color:var(--ac)}
+.lp-sub{font-size:1.14em;color:var(--mu);margin:18px 0 24px;max-width:560px}
+.lp-chips{list-style:none;display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.lp-chips li{padding:6px 12px;border-radius:99px;border:1px solid var(--bd);color:var(--mu);font-size:.88em;font-weight:600}
+.lp-chips li::before{content:"✓ ";color:var(--ok);font-weight:900}
+.lp-tv{justify-self:center;width:min(100%,290px);aspect-ratio:9/13;background:#0b0907;border:8px solid #2a2520;border-radius:22px;box-shadow:var(--sh);overflow:hidden;display:flex;flex-direction:column;transform:rotate(2deg)}
+.lp-tv-h{display:flex;justify-content:space-between;padding:12px 14px;background:var(--ac);color:#fff;font-weight:800}
+.lp-tv-b{flex:1;display:grid;grid-template-rows:1.1fr .9fr}
+.lp-tv-b>div{padding:12px 14px;display:flex;flex-wrap:wrap;align-content:flex-start;gap:4px 16px}
+.lp-tv-b small{width:100%;text-transform:uppercase;letter-spacing:.08em;font-size:.68em;color:#a39a90;font-weight:800;margin-bottom:4px}
+.lp-tv-b b{font-size:1.8em;font-weight:900;letter-spacing:-.02em;color:#f4efe9}
+.lp-tv-b .ok{background:#12301f}
+.lp-tv-b .ok b{color:#5be39a}
+.lp-pulso{animation:lpp 1.2s ease-in-out infinite}
+@keyframes lpp{50%{opacity:.3}}
+.lp-sec{padding-top:60px;scroll-margin-top:50px}
+.lp-sec h2{font-size:clamp(1.5em,3.4vw,2.1em);font-weight:900;letter-spacing:-.03em;line-height:1.1}
+.lp-lead{color:var(--mu);font-size:1.06em;margin:10px 0 22px;max-width:700px}
+.lp-pasos{list-style:none;counter-reset:p;display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:22px}
+.lp-pasos li{counter-increment:p;background:var(--pn);border:1px solid var(--bd);border-radius:var(--r);padding:20px}
+.lp-pasos li::before{content:counter(p);display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--ac);color:#fff;font-weight:900;margin-bottom:12px}
+.lp-pasos b{font-size:1.12em}
+.lp-pasos p,.lp-it p{color:var(--mu);margin-top:6px;font-size:.96em}
+.lp-plano{display:grid;gap:8px;grid-template-columns:repeat(6,1fr);grid-template-areas:"web web web rep rep rep" "par par ven ven coc coc" "mes mes mes mos mos mos";background:var(--pn);border:1px solid var(--bd);border-radius:var(--r);padding:10px}
+.lp-plano button{display:flex;flex-direction:column;align-items:flex-start;gap:2px;text-align:left;padding:14px;border-radius:11px;border:1.5px dashed var(--bd);background:var(--pn2);min-height:98px;transition:border-color .15s,background .15s}
+.lp-plano button .ic{font-size:1.6em;line-height:1.2}
+.lp-plano button small,.lp-ficha small,.lp-ficha dt{color:var(--mu);font-size:.74em;text-transform:uppercase;letter-spacing:.07em;font-weight:800}
+.lp-plano button:hover{border-color:var(--ac)}
+.lp-plano button.on{border:1.5px solid var(--ac);background:var(--ac2)}
+.lp-ficha{margin-top:10px;background:var(--pn);border:1px solid var(--bd);border-left:4px solid var(--ac);border-radius:var(--r);padding:20px;display:grid;grid-template-columns:1fr auto;gap:14px 24px;align-items:start}
+.lp-ficha h3{font-size:1.35em;font-weight:900;margin-top:2px}
+.lp-ficha dl{display:grid;grid-template-columns:auto 1fr;gap:8px 16px;margin-top:12px}
+.lp-ficha dt{padding-top:3px}
+.lp-nota{margin-top:10px;padding:14px 16px;border-radius:12px;background:var(--pn2);color:var(--mu);font-size:.95em}
+.lp-nota b{color:var(--tx)}
+.lp-grid,.lp-demos{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:22px}
+.lp-demos{margin-top:0}
+.lp-demos .card{padding:20px}
+.lp-it{background:var(--pn);border:1px solid var(--bd);border-radius:var(--r);padding:18px}
+.lp-it .ic{font-size:1.5em;display:block;margin-bottom:6px}
+.lp-crear{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center;background:var(--pn);border:1.5px solid var(--ac);border-radius:20px;padding:30px}
+.lp-crear .lp-lead{margin-bottom:10px}
+.lp-crear .f{display:flex;flex-direction:column;gap:5px;font-weight:650;font-size:.92em}
+.lp-crear .sw{display:flex;gap:9px;align-items:flex-start;color:var(--mu);font-size:.93em}
+.lp-crear .sw input{margin-top:3px;accent-color:var(--ac)}
+.lp-faq{margin-top:18px;border-top:1px solid var(--bd)}
+.lp-faq details{border-bottom:1px solid var(--bd)}
+.lp-faq summary{cursor:pointer;padding:16px 2px;font-weight:750;font-size:1.05em;list-style:none;display:flex;justify-content:space-between;gap:14px}
+.lp-faq summary::-webkit-details-marker{display:none}
+.lp-faq summary::after{content:"+";color:var(--ac);font-weight:900}
+.lp-faq details[open] summary::after{content:"−"}
+.lp-faq p{color:var(--mu);padding:0 2px 18px;max-width:760px}
+.lp-pie{display:flex;justify-content:space-between;align-items:center;margin-top:60px;padding-top:22px;padding-bottom:40px;border-top:1px solid var(--bd);color:var(--mu);font-size:.88em}
+.lp-pie button{color:var(--mu);text-decoration:underline}
+@media(max-width:860px){.lp-hero{grid-template-columns:1fr;padding-top:36px;gap:30px}.lp-tv{width:230px}.lp-crear{grid-template-columns:1fr;padding:22px}.lp-grid,.lp-demos{grid-template-columns:1fr 1fr}}
+@media(max-width:760px){.lp-links{display:none}.lp-pasos{grid-template-columns:1fr}}
+@media(max-width:620px){.lp-plano{grid-template-columns:1fr 1fr;grid-template-areas:none}.lp-plano button{grid-area:auto!important;min-height:0}.lp-plano button:last-child{grid-column:1/-1!important}.lp-ficha{grid-template-columns:1fr}.lp-ficha dl{grid-template-columns:1fr;gap:2px}.lp-ficha dd{margin-bottom:8px}.lp-grid,.lp-demos{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){.lp-pulso{animation:none}}
 </style>
 </head>
 <body>
@@ -291,9 +363,9 @@ body.cocina{--bg:#0c0b0a}
 <script src="hub.js"></script>
 <script src="qr.js"></script>
 <!-- Plugins de tienda: un archivo por rubro en la carpeta tiendas/. Para sumar uno, agregá su línea acá. -->
-<script src="tiendas/humo-burgers.js"></script>
-<script src="tiendas/empanadas-arabes.js"></script>
-<script src="tiendas/blue-sushi.js"></script>
+<script src="tiendas/tacky.js"></script>
+<script src="tiendas/etnico.js"></script>
+<script src="tiendas/blue-clean.js"></script>
 <script>
 'use strict';
 /* =====================================================================
@@ -599,7 +671,7 @@ async function navegar() {
   if (PANT && PANT.salir) PANT.salir();
   PANT = null;
   document.body.className = '';
-  document.title = 'Fork';
+  document.title = 'Fork · Pedidos, cocina y entrega para tu local';
   if (!r.slug) { R = r; return pantallaInicio(); }
   const def = PANTALLAS[r.pant];
   if (!def) { location.hash = '#/' + r.slug; return; }
@@ -706,6 +778,36 @@ function reiniciarDemo(t) {
   if ('BroadcastChannel' in window) { const b = new BroadcastChannel('fork:' + slug); b.postMessage(1); b.close(); }
 }
 
+/* Landing de Fork: los lugares del local y la pantalla que va en cada uno */
+const AYUDA_WA = '';   // WhatsApp de ayuda de la plataforma, con código de país y sin signos (ej. 5492954000000). Vacío: no se muestra
+const ESPACIOS = [
+  { id: 'web', area: 'web', ic: '📱', lugar: 'Redes y vidriera', n: 'Página de pedidos', disp: 'No va en un dispositivo tuyo: es un link y un QR. El link se pega en la bio de Instagram, el estado de WhatsApp o la ficha de Google. El QR se imprime para la vidriera o el volante.', quien: 'Tus clientes, desde su celular.', q: 'Ven el menú, piden para retirar o con envío, pagan por transferencia, Mercado Pago o en el local, y siguen el pedido hasta que está listo.', ruta: 'menu', pin: 0 },
+  { id: 'reparto', area: 'rep', ic: '🛵', lugar: 'En la calle', n: 'Reparto', disp: 'El celular del cadete.', quien: 'Quien hace los envíos.', q: 'Muestra lo que está listo para salir. Cada entrega trae mapa, teléfono del cliente, aviso por WhatsApp y cuánto cobrar. Si no tenés cadete, el mostrador puede pedir uno por PedidosYa Envíos o Uber Envíos.', ruta: 'reparto', pin: 1 },
+  { id: 'pared', area: 'par', ic: '📺', lugar: 'Vereda o zona de espera', n: 'Pared', disp: 'Una tele o un monitor, mejor en vertical, con navegador propio o con una compu o TV box conectado.', quien: 'La gente que espera su pedido.', q: 'Muestra los números en preparación y los que están listos. Suena y titila cuando llaman un pedido.', ruta: 'pared', pin: 0 },
+  { id: 'ventana', area: 'ven', ic: '🪟', lugar: 'Ventanilla de takeaway', n: 'Ventana', disp: 'Dos pantallas: una tablet mirando hacia la calle y otra tablet o compu para quien atiende.', quien: 'El cliente de un lado, quien atiende del otro.', q: 'El cliente arma su pedido tocando la pantalla, o ve lo que le van cargando y el QR para pagar. Quien atiende confirma, cobra, llama y entrega.', ruta: 'caja/v1', ruta2: 'ventana/v1', pin: 1 },
+  { id: 'cocina', area: 'coc', ic: '🧑‍🍳', lugar: 'Cocina', n: 'Cocina', disp: 'Una tablet o un monitor táctil a la vista de quien cocina. Si la cocina no tiene pantalla, la comanda se imprime en el mostrador.', quien: 'Quienes cocinan y arman.', q: 'Cada pedido llega como una comanda separada en pasos por estación: plancha, horno, barra. Se toca un paso al empezarlo y otra vez al terminarlo. Arriba suma lo que falta producir entre todos los pedidos, y desde ahí se marca un producto como agotado.', ruta: 'cocina', pin: 1 },
+  { id: 'mesas', area: 'mes', ic: '🪑', lugar: 'Salón', n: 'Menú QR en las mesas', disp: 'Un QR impreso en cada mesa. Fork los arma listos para imprimir. El cliente usa su propio celular.', quien: 'Los clientes sentados.', q: 'Ven el menú, piden, llaman al mozo y piden la cuenta. El pedido entra a la cocina y el estado de la mesa se ve en el mostrador.', ruta: 'menu?mesa=m1', pin: 0 },
+  { id: 'mostrador', area: 'mos', ic: '🧾', lugar: 'Mostrador o caja', n: 'Mostrador', disp: 'Una compu, una notebook o una tablet. Para arrancar alcanza con un celular.', quien: 'Quien atiende, cobra y coordina.', q: 'Reúne los pedidos de todos los orígenes: mesas, ventanilla, web, teléfono y apps de delivery. Tiene el plano del salón, los cobros, las cuentas, el despacho de envíos y la impresión de tickets.', ruta: 'mostrador', pin: 1 }
+];
+const LP_HACE = [
+  ['🪜', 'Comandas en pasos', 'Cada producto tiene su receta de pasos con minutos y estación. La plancha ve lo de la plancha y el horno lo del horno.'],
+  ['🧮', 'A producir', 'La suma de lo que falta hacer entre todos los pedidos. Las docenas y los combinados se abren por sabor.'],
+  ['🚫', 'Agotados al toque', 'La cocina marca un producto o un sabor como agotado y deja de venderse en todas las pantallas.'],
+  ['🛵', 'Envíos', 'Zonas con precio, cadete propio con su pantalla, o un botón para pedir uno por PedidosYa Envíos o Uber Envíos.'],
+  ['🖨', 'Impresión', 'Comandas, tickets y cuentas en térmicas de 58 u 80 mm o en A4, a mano o automática al entrar un pedido.'],
+  ['📶', 'Si se corta internet', 'La cocina, la caja y el mostrador siguen marcando pasos, cobros y entregas. Se envían solos cuando vuelve la conexión.']
+];
+const LP_FAQ = [
+  ['¿Cuánto cuesta?', 'Es gratis. Fork no cobra comisión por pedido ni interviene en los pagos: la plata va directo a tu alias o a tu Mercado Pago.'],
+  ['¿Tengo que crear una cuenta?', 'No. Fork no pide mail ni contraseña. Al crear el local recibís un link de administrador y un PIN para el personal. El link es tu llave: guardalo en un lugar seguro, por ejemplo mandándotelo a tu propio WhatsApp.'],
+  ['¿Qué necesito para empezar?', 'Internet y cualquier dispositivo con navegador. Recomendamos Chrome. No se instala nada, aunque en celulares y tablets podés agregarlo a la pantalla de inicio para que abra como una app.'],
+  ['¿Tengo que usar todas las pantallas?', 'No. Podés arrancar sólo con el mostrador y la página de pedidos. Las mesas, la pared, la ventanilla y los pedidos online se prenden y se apagan en Configuración, Mesas y módulos.'],
+  ['¿Cómo cobro?', 'Por transferencia (el cliente copia tu alias y te manda el comprobante por WhatsApp con un botón), con tu link de Mercado Pago, o en efectivo y tarjeta en el local. La confirmación del pago la hacés vos.'],
+  ['¿Y los pedidos de PedidosYa o Uber Eats?', 'Se cargan a mano en el mostrador como pedido externo, con el link de seguimiento o el teléfono del cadete, para que la cocina los vea junto al resto.'],
+  ['¿Puedo cambiar cómo se ve?', 'Sí. Elegís un estilo al crear el local y después cambiás el color, el logo, el nombre y los textos desde Configuración.'],
+  ['¿Qué pasa con mis datos?', 'Podés descargar un respaldo con tu configuración, tu menú y tus mesas cuando quieras. El nombre, el teléfono y la dirección de tus clientes los ven sólo las pantallas de tu personal. Un local que pasa 120 días sin uso se borra solo.']
+];
+
 async function pantallaInicio() {
   document.body.className = '';
   if (SYNC) { SYNC.cerrar(); SYNC = null; }
@@ -713,30 +815,97 @@ async function pantallaInicio() {
   const srv = await hayServidor();
   const mis = misLocales();
   const ts = lista(H.tiendas);
-  $('#app').innerHTML =
-    '<div class="home"><div class="hero"><div style="font-size:3em">🍴</div><h1>Fork<span>.</span></h1>' +
-    '<p>El compañero de la cocina y del local: pedidos, comandas desglosadas en pasos, mesas, ventanilla y la tele de la vereda, en cualquier pantalla. Cada rubro es un plugin con su menú, su forma de cocinar y su estética.</p></div>' +
-    '<div class="h2">Probá una demo</div><div class="cards">' + ts.map((t) =>
-      '<div class="card demo" style="border-top:4px solid ' + esc(t.tema.color) + '"><div class="row"><span style="font-size:2.4em">' + esc(t.emoji) + '</span><div><div class="tit" style="font-family:' + esc(t.tema.titulos || 'inherit') + '">' + esc(t.nombre) + '</div><div class="mu sm">' + esc(t.rubro) + '</div></div></div>' +
-      '<p class="mu" style="margin:10px 0 14px">' + esc(t.lema) + '</p>' +
-      '<div class="row w"><a class="bt" style="background:' + esc(t.tema.color) + ';color:#fff" href="#/' + demoDe(t) + '/panel">Abrir la demo</a><button class="bt gh sm" data-a="reiniciar" data-v="' + esc(t.id) + '">Reiniciar</button></div></div>').join('') + '</div>' +
-    '<p class="mu sm" style="margin-top:10px">Abrí varias pantallas de una misma demo en pestañas distintas y mirá cómo se mueven juntas. Cada demo guarda lo suyo, no se mezclan.</p>' +
-    '<div class="h2" style="margin-top:30px">Crear mi local</div><div class="card" style="padding:20px"><p class="mu" style="margin-bottom:12px">' +
-    (srv ? 'Te damos un link de administrador y un PIN para el personal. Gratis.' : 'Sin servidor conectado: el local queda guardado sólo en este navegador, ideal para probar.') + '</p>' +
-    '<form class="row w" id="fcrear"><input class="in" id="nombre" placeholder="Nombre del local" maxlength="60" required style="flex:2;min-width:200px">' +
-    '<select class="in" id="rubro" style="flex:1;min-width:190px">' + ts.map((t) => '<option value="' + esc(t.id) + '">' + esc(t.rubro) + '</option>').join('') + '<option value="">Otro rubro (en blanco)</option></select>' +
-    '<button class="bt ac">Crear</button></form><p class="mu sm" style="margin-top:8px">El rubro trae un menú de ejemplo con sus pasos de cocina y opciones, y la estética. Después cambiás todo.</p></div>' +
-    (mis.length ? '<div class="h2" style="margin-top:30px">Mis locales en este dispositivo</div><div class="pnt">' + mis.map((l) =>
-      '<a href="#/' + esc(l.slug) + '/panel"><span class="ic">' + esc((H.tiendas[l.tienda] && H.tiendas[l.tienda].emoji) || '🏪') + '</span><b>' + esc(l.nombre) + '</b><span class="mu sm">' + esc(l.slug) + '</span></a>').join('') + '</div>' : '') +
-    '<p class="mu sm" style="margin-top:40px">Fork · v' + H.version + ' · ' + ts.length + ' plugins de tienda</p></div>';
+  const conTodo = ts.find((t) => (t.mesas || []).length && t.cfg && t.cfg.envio && t.cfg.envio.activo) || ts[0];
+  const dslug = conTodo ? demoDe(conTodo) : '';
+  let esp = 'cocina';
+  $('#app').innerHTML = `<div class="lp">
+<header class="lp-nav"><div class="lp-w row">
+  <button class="lp-logo" data-ir="top"><img src="icon.svg" alt="" width="30" height="30">Fork</button>
+  <nav class="lp-links"><button data-ir="como">Cómo se usa</button><button data-ir="plano">Pantallas</button><button data-ir="demos">Demos</button><button data-ir="faq">Preguntas</button></nav>
+  <span class="sp"></span><button class="bt ac sm" data-ir="crear">Crear mi local</button>
+</div></header>
+${mis.length ? `<div class="lp-w"><div class="lp-mis"><b>Tus locales en este dispositivo</b>${mis.map((l) => `<a class="bt sm" href="#/${esc(l.slug)}/panel">${esc((H.tiendas[l.tienda] && H.tiendas[l.tienda].emoji) || '🏪')} ${esc(l.nombre)}</a>`).join('')}</div></div>` : ''}
+<section class="lp-hero lp-w" id="lp-top">
+  <div>
+    <h1>Pedidos, cocina y entrega de tu local, en las pantallas que ya tenés<span>.</span></h1>
+    <p class="lp-sub">Fork junta lo que entra por el mostrador, las mesas, la ventanilla y la web, lo manda a la cocina separado en pasos y le avisa al cliente cuando está listo. Se usa desde el navegador y es gratis.</p>
+    <div class="row w"><button class="bt ac xl" data-ir="crear">Crear mi local</button>${dslug ? `<a class="bt gh xl" href="#/${dslug}/panel">Probar una demo</a>` : ''}</div>
+    <ul class="lp-chips"><li>Sin mail ni contraseña</li><li>Sin instalar nada</li><li>Celular, tablet, compu o tele</li></ul>
+  </div>
+  <div class="lp-tv" aria-hidden="true"><div class="lp-tv-h"><span>🍴 Tu local</span><span class="n">21:14</span></div>
+    <div class="lp-tv-b"><div><small>En preparación</small><b>W-12</b><b>M-3</b><b>V-7</b><b>W-13</b></div><div class="ok"><small>¡Listo! Retirá</small><b class="lp-pulso">W-11</b><b>V-6</b></div></div></div>
+</section>
+<section class="lp-sec lp-w" id="lp-como"><h2>Cómo se usa</h2>
+  <ol class="lp-pasos">
+    <li><b>Creá tu local</b><p>Poné el nombre y elegí un estilo. Fork te da dos cosas: un link de administrador, que es tu llave para configurar todo, y un PIN de 6 dígitos para tu personal.</p></li>
+    <li><b>Cargá tu menú</b><p>Productos y precios. A cada producto le definís sus pasos de cocina (plancha, horno, armado) y sus opciones (sabores, extras, "sin cebolla"). También tus horarios, cómo cobrás y tus zonas de envío.</p></li>
+    <li><b>Poné cada pantalla en su lugar</b><p>En cada dispositivo abrís el link de la pantalla que le toca, o escaneás su QR, y ponés el PIN una sola vez. Desde ahí todas se mueven juntas.</p></li>
+  </ol>
+</section>
+<section class="lp-sec lp-w" id="lp-plano"><h2>Dónde va cada pantalla</h2>
+  <p class="lp-lead">Tocá un lugar del local para ver qué pantalla va ahí y en qué dispositivo. No hace falta usarlas todas: se puede arrancar sólo con el mostrador y la página de pedidos, y sumar el resto después.</p>
+  <div class="lp-plano">${ESPACIOS.map((x) => `<button data-esp="${x.id}" style="grid-area:${x.area}"><span class="ic">${x.ic}</span><small>${esc(x.lugar)}</small><b>${esc(x.n)}</b></button>`).join('')}</div>
+  <div class="lp-ficha" id="lp-ficha"></div>
+  <div class="lp-nota"><b>Para poner una pantalla en un dispositivo:</b> entrá a Configuración, Pantallas y QR. Cada pantalla tiene su link para copiar y un QR para escanear con la tablet, la tele o el celular. Las del personal piden el PIN la primera vez; después conviene dejarlas en pantalla completa.</div>
+</section>
+<section class="lp-sec lp-w"><h2>Lo que hace por la cocina y el salón</h2>
+  <div class="lp-grid">${LP_HACE.map((x) => `<div class="lp-it"><span class="ic">${x[0]}</span><b>${x[1]}</b><p>${x[2]}</p></div>`).join('')}</div>
+</section>
+<section class="lp-sec lp-w" id="lp-demos"><h2>Probá una demo</h2>
+  <p class="lp-lead">Tres locales de ejemplo con pedidos en marcha, cada uno con un estilo distinto. No hace falta crear nada. Abrí varias pantallas de una misma demo en pestañas distintas y mirá cómo se mueven juntas.</p>
+  <div class="lp-demos">${ts.map((t) => `<div class="card" style="border-top:4px solid ${esc(t.tema.color)}"><div class="tit" style="font-family:${esc(t.tema.titulos || 'inherit')}">${esc(t.emoji)} ${esc(t.nombre)}</div>
+    <p style="margin:8px 0 4px">${esc(t.lema)}</p><p class="mu sm" style="margin-bottom:14px">Menú de ejemplo: ${esc(t.ejemplo || t.rubro.toLowerCase())}.</p>
+    <div class="row w"><a class="bt" style="background:${esc(t.tema.color)};color:#fff" href="#/${demoDe(t)}/panel">Abrir la demo</a><button class="bt gh sm" data-a="reiniciar" data-v="${esc(t.id)}">Reiniciar</button></div></div>`).join('')}</div>
+</section>
+<section class="lp-sec lp-w" id="lp-crear"><div class="lp-crear">
+  <div><h2>Crear mi local</h2>
+    <p class="lp-lead">${srv ? 'Gratis, sin mail y sin contraseña. Al crearlo te mostramos el link de administrador y el PIN del personal.' : 'Sin servidor conectado: el local queda guardado sólo en este navegador, ideal para probar.'}</p>
+    <p class="mu sm">Guardá ese link: como Fork no pide mail, es la única forma de volver a entrar a la configuración.</p></div>
+  <form class="col" id="fcrear">
+    <label class="f">Nombre del local<input class="in" id="nombre" placeholder="Como lo conoce la gente" maxlength="60" required></label>
+    <label class="f">Estilo<select class="in" id="rubro">${ts.map((t) => `<option value="${esc(t.id)}">${esc(t.nombre)}</option>`).join('')}<option value="">Neutro, sin estilo</option></select></label>
+    <label class="sw"><input type="checkbox" id="conmenu" checked> Empezar con un menú de ejemplo para ver cómo se arma</label>
+    <button class="bt ac xl">Crear mi local</button>
+  </form>
+</div></section>
+<section class="lp-sec lp-w"><h2>Vos manejás tu local</h2>
+  <div class="lp-grid">
+    <div class="lp-it"><span class="ic">📋</span><b>Tu menú y tus horarios</b><p>Los cambiás cuando quieras desde Configuración, sin pedirle nada a nadie.</p></div>
+    <div class="lp-it"><span class="ic">💸</span><b>Tu plata va directo a vos</b><p>Transferencia a tu alias o tu link de Mercado Pago. Fork no cobra comisión ni toca los pagos.</p></div>
+    <div class="lp-it"><span class="ic">🛟</span><b>La plataforma, de nuestro lado</b><p>Jean Phillippe Studio mantiene Fork funcionando y lo va mejorando. Lo que pasa dentro de tu local lo decidís vos.${AYUDA_WA ? ` <a href="https://wa.me/${esc(AYUDA_WA)}" target="_blank" rel="noopener">Escribinos por WhatsApp</a>` : ''}</p></div>
+  </div>
+</section>
+<section class="lp-sec lp-w" id="lp-faq"><h2>Preguntas</h2>
+  <div class="lp-faq">${LP_FAQ.map((x) => `<details><summary>${x[0]}</summary><p>${x[1]}</p></details>`).join('')}</div>
+</section>
+<footer class="lp-pie lp-w"><span>Fork · v${H.version}</span><button data-ir="top">Volver arriba</button></footer>
+</div>`;
+  const pintarEsp = () => {
+    const x = ESPACIOS.find((s) => s.id === esp);
+    $$('.lp-plano button').forEach((b) => b.classList.toggle('on', b.dataset.esp === esp));
+    $('#lp-ficha').innerHTML = `<div><small>${esc(x.lugar)}</small><h3>${x.ic} ${esc(x.n)}</h3>
+      <dl><dt>Dispositivo</dt><dd>${esc(x.disp)}</dd><dt>La usa</dt><dd>${esc(x.quien)}</dd><dt>Qué hace</dt><dd>${esc(x.q)}</dd><dt>Acceso</dt><dd>${x.pin ? 'Pide el PIN del personal la primera vez.' : 'Abierta, sin PIN.'}</dd></dl></div>` +
+      (dslug ? `<div class="col"><a class="bt ac" href="#/${dslug}/${x.ruta}">Verla en la demo</a>${x.ruta2 ? `<a class="bt gh" href="#/${dslug}/${x.ruta2}">Ver la del cliente</a>` : ''}</div>` : '');
+  };
+  pintarEsp();
   $('#app').onclick = (e) => {
+    const ir = e.target.closest('[data-ir]');
+    if (ir) {
+      const d = $('#lp-' + ir.dataset.ir);
+      if (d) d.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      if (ir.dataset.ir === 'crear') setTimeout(() => { const n = $('#nombre'); if (n) n.focus({ preventScroll: true }); }, 500);
+      return;
+    }
+    const es = e.target.closest('[data-esp]');
+    if (es) { esp = es.dataset.esp; pintarEsp(); return; }
     const b = e.target.closest('[data-a="reiniciar"]');
-    if (b && H.tiendas[b.dataset.v]) { reiniciarDemo(H.tiendas[b.dataset.v]); toast('Demo de ' + H.tiendas[b.dataset.v].nombre + ' reiniciada', 'ok'); }
+    if (b && H.tiendas[b.dataset.v]) { reiniciarDemo(H.tiendas[b.dataset.v]); toast('Demo ' + H.tiendas[b.dataset.v].nombre + ' reiniciada', 'ok'); }
   };
   $('#fcrear').onsubmit = async (e) => {
     e.preventDefault();
     const nombre = $('#nombre').value.trim();
     const rubro = $('#rubro').value;
+    const conMenu = $('#conmenu').checked;
     const t = H.tiendas[rubro] || null;
     if (nombre.length < 2) return;
     if (srv) {
@@ -745,14 +914,17 @@ async function pantallaInicio() {
         const j = await r.json();
         if (!r.ok) return toast(j.error || 'No se pudo crear', 'bad');
         LS.set('fork:k:' + j.slug, j.admin);
-        if (t) LS.set('fork:plantilla:' + j.slug, t.id);
+        if (t) LS.set('fork:plantilla:' + j.slug, t.id + (conMenu ? '' : ':vacio'));
         guardarLocal({ slug: j.slug, nombre, tienda: rubro });
+        j.nombre = nombre;
         location.hash = '#/' + j.slug + '/config';
         setTimeout(() => bienvenida(j), 300);
       } catch (er) { toast('No hay conexión con el servidor', 'bad'); }
     } else {
       const slug = 'local-' + nombre.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 20) + '-' + H.rid(4);
-      LS.set('fork:st:' + slug, t ? H.desdePlantilla(t, nombre, Date.now(), true) : H.nuevo({ nombre }));
+      const st = t ? H.desdePlantilla(t, nombre, Date.now(), true) : H.nuevo({ nombre });
+      if (t && !conMenu) { st.menu = { cats: [], items: {} }; st.mesas = {}; st.cfg.emoji = '🍽️'; st.cfg.lema = ''; }
+      LS.set('fork:st:' + slug, st);
       guardarLocal({ slug, nombre, tienda: rubro });
       location.hash = '#/' + slug + '/config';
     }
@@ -761,11 +933,14 @@ async function pantallaInicio() {
 
 function bienvenida(j) {
   const adm = url(j.slug, 'config', 'k=' + j.admin);
-  modal('<div class="tit">Tu local está listo 🎉</div><p class="mu" style="margin:8px 0 14px">Guardá estos dos datos en un lugar seguro. Fork no tiene usuarios ni contraseñas: quien tenga el link de administrador puede cambiar todo.</p>' +
+  const wa = 'https://wa.me/?text=' + encodeURIComponent('Fork · ' + (j.nombre || 'Mi local') + '\nLink de administrador (no compartir): ' + adm + '\nPIN del personal: ' + j.pin);
+  modal('<div class="tit">Tu local está listo 🎉</div><p class="mu" style="margin:8px 0 14px">Guardá estos dos datos antes de seguir. Fork no tiene usuarios ni contraseñas: quien tenga el link de administrador puede cambiar todo, y si lo perdés no hay forma de recuperarlo.</p>' +
     '<div class="b sm">Link de administrador</div><div class="copiar"><code>' + esc(adm) + '</code><button class="bt sm" data-c="' + esc(adm) + '">Copiar</button></div>' +
     '<div class="b sm" style="margin-top:12px">PIN del personal</div><div class="copiar"><code class="n" style="font-size:1.6em;letter-spacing:.2em">' + esc(j.pin) + '</code><button class="bt sm" data-c="' + esc(j.pin) + '">Copiar</button></div>' +
-    '<p class="mu sm" style="margin-top:10px">El PIN se usa para abrir la cocina, la caja, el mostrador y la ventanilla. Lo podés ver después en Configuración, pestaña Pantallas.</p>' +
-    '<button class="bt ac" style="width:100%;margin-top:14px" data-cerrar>Entendido</button>').addEventListener('click', (e) => { const b = e.target.closest('[data-c]'); if (b) copiar(b.dataset.c); });
+    '<a class="bt ok" style="width:100%;margin-top:14px" target="_blank" rel="noopener" href="' + esc(wa) + '">Guardarlos en mi WhatsApp</a>' +
+    '<p class="mu sm" style="margin-top:10px">Elegí tu propio chat o uno donde sólo estés vos. El PIN abre la cocina, la caja, el mostrador y la ventanilla, y lo podés ver después en Configuración, Pantallas y QR.</p>' +
+    '<p class="sm" style="margin-top:10px"><b>Lo que sigue:</b> cargá tu menú en la pestaña Menú, tus horarios y tus cobros, y después abrí cada pantalla desde Pantallas y QR.</p>' +
+    '<button class="bt ac" style="width:100%;margin-top:14px" data-cerrar>Ya los guardé</button>').addEventListener('click', (e) => { const b = e.target.closest('[data-c]'); if (b) copiar(b.dataset.c); });
 }
 
 /* =====================================================================
@@ -2024,10 +2199,13 @@ PANTALLAS.config = {
     this.menu = H.clon(E().menu);
     this.envio = Object.assign({ activo: false, zonas: [], minimo: 0, extra: 15, pyLink: '', uberLink: '' }, H.clon(E().cfg.envio || {}));
     // Local recién creado con un rubro: se carga el menú, la cocina y la estética del plugin
-    const pend = LS.get('fork:plantilla:' + R.slug, '');
+    const pend0 = LS.get('fork:plantilla:' + R.slug, '');
+    const pend = pend0.split(':')[0], sinMenu = /:vacio$/.test(pend0);
     if (pend && H.tiendas[pend] && !Object.keys(E().menu.items).length) {
       LS.del('fork:plantilla:' + R.slug);
-      hacer({ o: 'importar', v: H.plantilla(H.tiendas[pend], E().cfg.nombre, true) }, 'Cargamos el menú de ejemplo de ' + H.tiendas[pend].rubro.toLowerCase())
+      const pl = H.plantilla(H.tiendas[pend], E().cfg.nombre, true);
+      if (sinMenu) { pl.menu = { cats: [], items: {} }; pl.mesas = {}; pl.cfg.emoji = '🍽️'; pl.cfg.lema = ''; }
+      hacer({ o: 'importar', v: pl }, sinMenu ? 'Aplicamos el estilo ' + H.tiendas[pend].nombre : 'Cargamos el menú de ejemplo de ' + H.tiendas[pend].rubro.toLowerCase())
         .then(() => { aplicarTema(); this.menu = H.clon(E().menu); this.pintar(); }).catch(() => {});
     }
     root.innerHTML = '<div class="app">' + barra('Configuración', '<a class="bt sm gh" href="#/' + esc(R.slug) + '/panel">Pantallas</a>') + '<div class="cfg" id="cf"></div></div>';
@@ -2049,7 +2227,7 @@ PANTALLAS.config = {
   t_local() {
     const ts = lista(H.tiendas), act = E().cfg.tienda;
     return '<div class="pn col"><label class="f">Rubro (plugin de tienda): define la estética, los textos y las notas rápidas de la cocina<select class="in" data-k="tienda">' +
-      ts.map((t) => '<option value="' + esc(t.id) + '"' + (t.id === act ? ' selected' : '') + '>' + esc(t.emoji + ' ' + t.rubro + ' · estilo ' + t.nombre) + '</option>').join('') +
+      ts.map((t) => '<option value="' + esc(t.id) + '"' + (t.id === act ? ' selected' : '') + '>' + esc(t.emoji + ' ' + t.nombre + ' · ejemplo de ' + t.rubro.toLowerCase()) + '</option>').join('') +
       '<option value=""' + (!H.tiendas[act] ? ' selected' : '') + '>Sin plugin (estética base de Fork)</option></select></label>' +
       '<div class="grid2">' + this.campo('nombre', 'Nombre del local', 'maxlength="60"') + this.campo('lema', 'Frase corta', 'maxlength="120"') +
       this.campo('emoji', 'Emoji', 'maxlength="8"') + this.campo('logo', 'Logo (link a una imagen, opcional)', 'placeholder="https://…"') +
@@ -2122,12 +2300,12 @@ PANTALLAS.config = {
   },
   t_pantallas() {
     const s = R.slug;
-    const pts = [['Landing y pedidos online', 'menu', 0], ['Pared (TV)', 'pared', 0], ['Cocina', 'cocina', 1], ['Mostrador', 'mostrador', 1], ['Ventana · Operador', 'caja/v1', 1], ['Ventana · Cliente', 'ventana/v1', 1]];
+    const pts = [['Página de pedidos', 'menu', 0], ['Pared (TV)', 'pared', 0], ['Cocina', 'cocina', 1], ['Mostrador', 'mostrador', 1], ['Ventana · Operador', 'caja/v1', 1], ['Ventana · Cliente', 'ventana/v1', 1]].concat((E().cfg.envio || {}).activo ? [['Reparto', 'reparto', 1]] : []);
     return '<div class="pn col">' + (SYNC.local ? '<div class="chip wa">Este local funciona sólo en este navegador. Para usarlo en varios dispositivos, publicá Fork con el Worker y creá el local desde ahí.</div>' :
       '<div class="h2">PIN del personal</div><div class="copiar"><code class="n" style="font-size:1.5em;letter-spacing:.2em">' + esc(SYNC.pin || '') + '</code><button class="bt sm" data-c="' + esc(SYNC.pin || '') + '">Copiar</button></div>' +
       '<p class="mu sm">Se pide una vez en cada tablet o pantalla del personal. El link de administrador no lo compartas.</p>') +
       '<div class="h2" style="margin-top:10px">Links de cada pantalla</div>' +
-      pts.map((p) => '<div class="copiar"><span class="b" style="min-width:150px">' + p[0] + (p[2] ? ' 🔒' : '') + '</span><code class="sm">' + esc(url(s, p[1])) + '</code><button class="bt sm" data-c="' + esc(url(s, p[1])) + '">Copiar</button><a class="bt sm gh" target="_blank" href="' + esc(url(s, p[1])) + '">Abrir</a></div>').join('') +
+      pts.map((p) => '<div class="copiar"><span class="b" style="min-width:150px">' + p[0] + (p[2] ? ' 🔒' : '') + '</span><code class="sm">' + esc(url(s, p[1])) + '</code><button class="bt sm" data-c="' + esc(url(s, p[1])) + '">Copiar</button><button class="bt sm" data-a="qrp" data-v="' + esc(url(s, p[1])) + '" data-n="' + esc(p[0]) + '">QR</button><a class="bt sm gh" target="_blank" href="' + esc(url(s, p[1])) + '">Abrir</a></div>').join('') +
       '<button class="bt ac" data-a="qrs" style="margin-top:12px">Ver e imprimir los QR</button></div>';
   },
   t_respaldo() {
@@ -2219,6 +2397,10 @@ PANTALLAS.config = {
       this.menu = H.clon(E().menu); this.pintar(); return;
     }
     if (a === 'qrs') { this.qrs(); return; }
+    if (a === 'qrp') {
+      modal('<div class="tit">' + esc(el.dataset.n) + '</div><p class="mu" style="margin:6px 0 14px">Escaneá este código con el dispositivo donde va esta pantalla.</p><div style="background:#fff;padding:16px;border-radius:14px;max-width:300px;margin:0 auto">' + qrSVG(el.dataset.v) + '</div><button class="bt ac" style="width:100%;margin-top:14px" data-cerrar>Listo</button>');
+      return;
+    }
     if (a === 'exportar') {
       const st = E();
       const b = new Blob([JSON.stringify({ fork: H.version, cfg: st.cfg, menu: st.menu, mesas: st.mesas }, null, 2)], { type: 'application/json' });

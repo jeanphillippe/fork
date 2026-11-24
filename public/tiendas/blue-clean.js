@@ -1,6 +1,7 @@
-/* Fork · plugin de tienda: Blue Sushi
-   Barra fría y cocina caliente separadas, combinados con rolls a elección
-   y salsas por pedido. Tiene salón con barra (B1 a B4) y mesas. */
+/* Fork · plugin de tienda: Blue Clean
+   Estilo limpio y prolijo: azul, mucho aire y tipografía liviana.
+   El menú de ejemplo es de sushi: barra fría y cocina caliente separadas,
+   combinados con rolls a elección y salsas por pedido, barra (B1 a B4) y mesas. */
 (function () {
   var rolls = ['Philadelphia', 'New York', 'California', 'Blue roll', 'Veggie', 'Tempura roll'];
   var salsas = { id: 'salsas', n: 'Salsas', t: 'varios', max: 3, items: [{ n: 'Soja' }, { n: 'Agridulce' }, { n: 'Teriyaki' }, { n: 'Spicy mayo', precio: 600 }] };
@@ -14,10 +15,11 @@
 
   ForkHub.tienda({
     id: 'blue',
-    nombre: 'Blue Sushi',
+    nombre: 'Blue Clean',
     rubro: 'Sushi',
     emoji: '🍣',
-    lema: 'Rolls, combinados y cocina japonesa',
+    lema: 'Simple, fresco y prolijo',
+    ejemplo: 'sushi con combinados a elección, barra fría, cocina caliente y salón',
     tema: {
       color: '#3d7bff',
       oscuro: { bg: '#070b14', pn: '#0d1424', pn2: '#131d33', pn3: '#1b2842', bd: '#22324f', tx: '#eef3ff', mu: '#8d9bb8' },
@@ -30,24 +32,24 @@
         '[data-tienda="blue"] .pared .cl+.cl .nn{color:#9cc2ff}'
     },
     textos: {
-      paredPrep: 'Armando',
+      paredPrep: 'En preparación',
       paredListo: 'Listo para retirar',
-      prepTit: 'Estamos armando tus rolls',
-      listoTit: '¡Tu sushi está listo!',
+      prepTit: 'Estamos preparando tu pedido',
+      listoTit: '¡Tu pedido está listo!',
       listoRetira: 'Retiralo en la barra con tu número.',
-      cocinaVacia: 'Barra tranquila. Nada en espera.',
-      resena: '¿Qué tal estuvo el sushi?'
+      cocinaVacia: 'Todo tranquilo. Nada en espera.',
+      resena: '¿Qué tal estuvo?'
     },
-    notas: ['Sin wasabi', 'Sin sésamo', 'Salsas aparte', 'Sin palitos', 'Palitos de práctica', 'Alergia a mariscos'],
+    notas: ['Salsas aparte', 'Sin sésamo', 'Sin picante', 'Sin cubiertos', 'Alergia: avisar al cliente'],
     cfg: {
-      direccion: 'Pellegrini 210', whatsapp: '5492954000002', instagram: 'bluesushi',
-      alias: 'blue.sushi', cbu: '0000003100098765432109', titular: 'Blue Sushi',
-      mpLink: 'https://link.mercadopago.com.ar/bluesushi', medios: { efectivo: true, alias: true, mp: true },
+      direccion: 'Pellegrini 210', whatsapp: '5492954000002', instagram: 'blueclean.demo',
+      alias: 'blueclean.demo', cbu: '0000003100098765432109', titular: 'Blue Clean',
+      mpLink: 'https://link.mercadopago.com.ar/bluecleandemo', medios: { efectivo: true, alias: true, mp: true },
       placeId: 'ChIJ_ejemplo_place_id', pedidosYa: 'https://www.pedidosya.com.ar', uberEats: 'https://www.ubereats.com',
       demora: 12, capacidad: 3, ciudad: 'Santa Rosa, La Pampa',
       envio: { activo: true, minimo: 15000, extra: 20, pyLink: 'https://envios.pedidosya.com', uberLink: 'https://m.uber.com/go/connect/',
         zonas: [{ n: 'Centro', costo: 1800 }, { n: 'Barrio Norte', costo: 2200 }, { n: 'Villa del Parque', costo: 2500 }, { n: 'Zona Sur', costo: 2800 }] },
-      impresion: { ancho: '80', pie: 'Arigato! Contanos qué te pareció en Google' },
+      impresion: { ancho: '80', pie: 'Gracias. Contanos qué te pareció en Google' },
       horarios: [[['20:00', '00:30']], [], [['20:00', '00:30']], [['20:00', '00:30']], [['20:00', '00:30']], [['20:00', '01:00']], [['20:00', '01:00']]],
       modulos: { mesas: true, pared: true, ventana: true, online: true }
     },

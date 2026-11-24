@@ -1,6 +1,8 @@
-/* Fork · plugin de tienda: Empanadas Árabes (rotisería de fatay y sfiha)
-   Todo para llevar: sin mesas. Se vende por docena y media docena surtidas,
-   así que la cocina ve cuántas de cada sabor tiene que armar y hornear. */
+/* Fork · plugin de tienda: Étnico
+   Estilo cálido y artesanal: terracota, crema, guarda geométrica y títulos con serif.
+   El menú de ejemplo es de empanadas árabes, todo para llevar y sin mesas:
+   se vende por docena y media docena surtidas, así que la cocina ve
+   cuántas de cada sabor tiene que armar y hornear. */
 (function () {
   var sabores = function (total) {
     return [{ id: 'sabores', n: 'Sabores', t: 'surtido', total: total, items: [
@@ -11,38 +13,39 @@
   };
 
   ForkHub.tienda({
-    id: 'empanadas',
-    nombre: 'Empanadas Árabes',
+    id: 'etnico',
+    nombre: 'Étnico',
     rubro: 'Empanadas y rotisería',
     emoji: '🥟',
-    lema: 'Fatay y sfiha recién salidos del horno',
+    lema: 'Recetas de familia, hechas en el momento',
+    ejemplo: 'empanadas árabes por docena surtida, para retirar o con envío, sin mesas',
     tema: {
       color: '#c4532b',
       oscuro: { bg: '#120d0a', pn: '#1d1511', pn2: '#271c16', pn3: '#33251d', bd: '#3d2d23', tx: '#f7ede2', mu: '#b39f8c' },
       claro: { bg: '#fbf4e8', pn: '#fffaf2', pn2: '#f4e8d6', pn3: '#ecdcc4', bd: '#e6d3b8', tx: '#2a1a10', mu: '#86705c' },
       titulos: 'Georgia, "Iowan Old Style", "Palatino Linotype", Palatino, serif',
-      css: '[data-tienda="empanadas"] .hero2{background-color:#a8401c;background-image:linear-gradient(135deg,#ffffff14 25%,transparent 25%),linear-gradient(225deg,#ffffff14 25%,transparent 25%),linear-gradient(45deg,#ffffff14 25%,transparent 25%),linear-gradient(315deg,#ffffff14 25%,transparent 25%);background-size:28px 28px;background-position:14px 0,14px 0,0 0,0 0}' +
-        '[data-tienda="empanadas"] .hero2 h1{font-weight:700;letter-spacing:0}' +
-        '[data-tienda="empanadas"] .pared header{background:#a8401c}'
+      css: '[data-tienda="etnico"] .hero2{background-color:#a8401c;background-image:linear-gradient(135deg,#ffffff14 25%,transparent 25%),linear-gradient(225deg,#ffffff14 25%,transparent 25%),linear-gradient(45deg,#ffffff14 25%,transparent 25%),linear-gradient(315deg,#ffffff14 25%,transparent 25%);background-size:28px 28px;background-position:14px 0,14px 0,0 0,0 0}' +
+        '[data-tienda="etnico"] .hero2 h1{font-weight:700;letter-spacing:0}' +
+        '[data-tienda="etnico"] .pared header{background:#a8401c}'
     },
     textos: {
-      paredPrep: 'En el horno',
-      paredListo: '¡Salieron! Retirá',
-      prepTit: 'Tus empanadas están en el horno',
-      listoTit: '¡Tus empanadas están listas!',
-      listoRetira: 'Pasá a retirarlas por el mostrador con tu número.',
-      cocinaVacia: 'Horno libre. A esperar el próximo pedido.',
-      tocaPedir: 'Tocá para armar tu docena',
-      resena: '¿Qué tal estuvieron?'
+      paredPrep: 'En preparación',
+      paredListo: '¡Listo! Retirá',
+      prepTit: 'Lo estamos preparando',
+      listoTit: '¡Tu pedido está listo!',
+      listoRetira: 'Pasá a retirarlo por el mostrador con tu número.',
+      cocinaVacia: 'Cocina tranquila. A esperar el próximo pedido.',
+      tocaPedir: 'Tocá para armar tu pedido',
+      resena: '¿Qué tal estuvo?'
     },
-    notas: ['Bien doradas', 'Limón aparte', 'Sin picante', 'Separar por sabor', 'Para llevar lejos'],
+    notas: ['Sin picante', 'Bien dorado', 'Limón aparte', 'Separar por sabor', 'Para llevar lejos'],
     cfg: {
-      direccion: 'Calle Belgrano 560', whatsapp: '5492954000001', instagram: 'empanadasarabes',
-      alias: 'empanadas.arabes', titular: 'Empanadas Árabes', medios: { efectivo: true, alias: true, mp: false },
+      direccion: 'Calle Belgrano 560', whatsapp: '5492954000001', instagram: 'etnico.demo',
+      alias: 'etnico.demo', titular: 'Étnico', medios: { efectivo: true, alias: true, mp: false },
       demora: 10, capacidad: 4, ciudad: 'Santa Rosa, La Pampa',
       envio: { activo: true, minimo: 11500, extra: 20, pyLink: 'https://envios.pedidosya.com', uberLink: 'https://m.uber.com/go/connect/',
         zonas: [{ n: 'Centro', costo: 1500 }, { n: 'Barrio Norte', costo: 1800 }, { n: 'Villa del Parque', costo: 2000 }, { n: 'Zona Sur', costo: 2300 }, { n: 'Afueras', costo: 3500 }] },
-      impresion: { ancho: '58', pie: 'Shukran! Gracias por tu compra' },
+      impresion: { ancho: '58', pie: 'Gracias por tu compra' },
       horarios: [[['11:30', '14:30'], ['19:30', '23:30']], [], [['11:30', '14:30'], ['19:30', '23:30']], [['11:30', '14:30'], ['19:30', '23:30']],
         [['11:30', '14:30'], ['19:30', '23:30']], [['11:30', '14:30'], ['19:30', '00:00']], [['11:30', '14:30'], ['19:30', '00:00']]],
       modulos: { mesas: false, pared: true, ventana: true, online: true }

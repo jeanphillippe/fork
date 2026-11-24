@@ -1,7 +1,9 @@
-/* Fork · plugin de tienda: Humo Burgers (hamburguesería)
-   Un plugin trae todo lo propio de un rubro: estética, textos, notas rápidas
-   para la cocina, menú con pasos y opciones, mesas y pedidos de muestra.
-   El núcleo de Fork no sabe nada de hamburguesas: todo eso vive acá. */
+/* Fork · plugin de tienda: Tacky
+   Estilo fuerte y divertido: rosa, naranja y amarillo, títulos gritones.
+   Un plugin trae la estética, los textos, las notas rápidas para la cocina,
+   un menú de ejemplo con pasos y opciones, mesas y pedidos de muestra.
+   El menú de ejemplo es de hamburguesas: plancha, freidora y barra,
+   extras con precio, "sacar" ingredientes y tamaño de papas. */
 (function () {
   var plancha = function (m) {
     return [{ n: 'Plancha', min: m, est: 'Plancha' }, { n: 'Armado', min: 2, est: 'Armado' }, { n: 'Empaque', min: 1, est: 'Armado' }];
@@ -14,37 +16,40 @@
   ];
 
   ForkHub.tienda({
-    id: 'humo',
-    nombre: 'Humo Burgers',
+    id: 'tacky',
+    nombre: 'Tacky',
     rubro: 'Hamburguesería',
     emoji: '🍔',
-    lema: 'Smash burgers a la plancha',
+    lema: 'Colores fuertes y comida con onda',
+    ejemplo: 'hamburguesas, papas y bebidas, con plancha, freidora y barra',
     tema: {
-      color: '#ff6a1a',
-      oscuro: { bg: '#0f0d0b', pn: '#1a1714', pn2: '#24201c', pn3: '#2f2a24', bd: '#352f29' },
-      claro: { bg: '#faf6f1', pn: '#ffffff', pn2: '#f4eee6', pn3: '#ebe3d8', bd: '#e6dccf' },
-      titulos: 'system-ui, -apple-system, "Segoe UI", Roboto, sans-serif',
-      css: '[data-tienda="humo"] .hero2{background:linear-gradient(160deg,#ff6a1a,#7a2a06 75%,#2a1208)}' +
-        '[data-tienda="humo"] .pared header{background:linear-gradient(90deg,#ff6a1a,#c2410c)}'
+      color: '#ff2d87',
+      oscuro: { bg: '#160a24', pn: '#221036', pn2: '#2d1747', pn3: '#3a1f5a', bd: '#4a2a70', tx: '#fff6fb', mu: '#c3a8dc' },
+      claro: { bg: '#fff8d6', pn: '#ffffff', pn2: '#ffeeb0', pn3: '#ffe38a', bd: '#f5cf5e', tx: '#2a0f3a', mu: '#7d5a8f' },
+      titulos: 'Impact, Haettenschweiler, "Arial Narrow Bold", "Franklin Gothic Bold", sans-serif',
+      css: '[data-tienda="tacky"] .hero2{background:linear-gradient(135deg,#ff2d87,#ff7a1a 55%,#ffd21f)}' +
+        '[data-tienda="tacky"] .hero2 h1{text-transform:uppercase;font-weight:400;letter-spacing:.01em;text-shadow:3px 3px 0 #2a0f3a}' +
+        '[data-tienda="tacky"] .pared header{background:linear-gradient(90deg,#ff2d87,#ff7a1a)}' +
+        '[data-tienda="tacky"] .pared header h1{text-transform:uppercase;font-weight:400}'
     },
     textos: {
-      paredPrep: 'En la plancha',
-      paredListo: '¡Listo! Retirá',
-      prepTit: 'Tu burger está en la plancha',
-      listoTit: '¡Está lista!',
-      cocinaVacia: '🔥 Plancha libre. A esperar la próxima.',
-      resena: '¿Cómo estuvo la burger?'
+      paredPrep: '¡Marchando!',
+      paredListo: '¡Salió! Retirá',
+      prepTit: '¡Tu pedido está marchando!',
+      listoTit: '¡Salió tu pedido!',
+      cocinaVacia: '🔥 Nada en espera. A esperar el próximo.',
+      resena: '¿Cómo estuvo todo?'
     },
-    notas: ['Sin cebolla', 'Sin tomate', 'Bien cocida', 'Sin sal', 'Pan sin tostar', 'Cortada al medio'],
+    notas: ['Sin sal', 'Sin picante', 'Bien cocido', 'Salsa aparte', 'Cortado al medio', 'Para compartir'],
     cfg: {
-      direccion: 'Av. San Martín 1234', whatsapp: '5492954000000', instagram: 'humoburgers',
-      alias: 'humo.burgers.mp', cbu: '0000003100012345678901', titular: 'Humo Burgers',
-      mpLink: 'https://link.mercadopago.com.ar/humoburgers', medios: { efectivo: true, alias: true, mp: true },
+      direccion: 'Av. San Martín 1234', whatsapp: '5492954000000', instagram: 'tacky.demo',
+      alias: 'tacky.demo', cbu: '0000003100012345678901', titular: 'Tacky',
+      mpLink: 'https://link.mercadopago.com.ar/tackydemo', medios: { efectivo: true, alias: true, mp: true },
       placeId: 'ChIJ_ejemplo_place_id', pedidosYa: 'https://www.pedidosya.com.ar',
       demora: 8, capacidad: 3, ciudad: 'Santa Rosa, La Pampa',
       envio: { activo: true, minimo: 9000, extra: 15, pyLink: 'https://envios.pedidosya.com', uberLink: 'https://m.uber.com/go/connect/',
         zonas: [{ n: 'Centro', costo: 1500 }, { n: 'Barrio Norte', costo: 2000 }, { n: 'Villa del Parque', costo: 2200 }, { n: 'Zona Sur', costo: 2500 }] },
-      impresion: { ancho: '80', pie: '¡Gracias por elegir Humo! Seguinos en @humoburgers' },
+      impresion: { ancho: '80', pie: '¡Gracias por venir! Volvé pronto' },
       modulos: { mesas: true, pared: true, ventana: true, online: true }
     },
     menu: {
